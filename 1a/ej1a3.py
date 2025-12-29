@@ -18,13 +18,10 @@ Ejemplo:
 
 def invert_text(text_chain:str):
     
-    if type(text_chain) != str:
-        raise TypeError('El valor debe ser una cadena de texto')
+    if not isinstance(text_chain, str):
+        raise TypeError("El valor debe ser una cadena de texto")
 
-    string_inverted = text_chain[::-1]
-    
-    return string_inverted
-
+    return text_chain[::-1]
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
