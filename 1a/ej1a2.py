@@ -32,7 +32,7 @@ def sum_odd_numbers(list_numbers):
 	for number in list_numbers:
 
 		if not all(isinstance(n, int) for n in list_numbers):
-			raise ValueError("Todos los valores deben ser enteros")
+			raise ValueError("Todos los valores deben ser enteros")				
 	
 		if not all(n >= 0 for n in list_numbers):
 			raise ValueError("Todos los valores deben ser >= 0")
@@ -45,4 +45,7 @@ def sum_odd_numbers(list_numbers):
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+try:
+	print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+except ValueError as e:
+    print(f'ERROR {e}')
