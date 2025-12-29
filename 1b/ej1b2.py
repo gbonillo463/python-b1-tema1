@@ -31,44 +31,25 @@ Ejemplo:
     Salida:
     -1
 
-Enunciat:
-Utilitzant la llibreria 'math', implementa una funció anomenada
-'calculate_angle(angle)' que rebi com a paràmetre un número
-corresponent a un angle en graus anomenat 'angle' i retorni
-com a resultat el sinus de l'angle arrodonit a 2 decimals.
-
-Trobaràs la documentació de la llibreria 'math' en el 
-següent enllaç: https://docs.python.org/3/library/math.html
-
-En concret, la funció 'sense(x)' de la llibreria 'math' la 
-pots trobar en el següent enllaç:
-https://docs.python.org/3/library/math.html#math.sense
-
-I la funció 'radians(x)' de la llibreria 'math' la pots
-trobar en el següent enllaç:
-https://docs.python.org/3/library/math.html#math.radians
-(et servirà per a convertir els graus a radiants)
-
-Recorda que pots arrodonir decimals amb la funció 
-'round(x, n)'
-
-Paràmetres:
-- àngel: Sencer corresponent al valor d'un angle.
-
-Exemple:
-     Entrada:
-     calculate_angle(270)
-
-     Sortida:
-     -1
 """
 
 import math
 
 def calculate_angle(angle):
-    # Write here your code
-    pass
+    
+    if type(angle) is not int:
+        raise ValueError("El valor debe ser un entero")
+        
+    if angle < 0:
+        raise ValueError("El número debe ser >= 0")
+    
+    radian = math.radians(angle)
+    return round(math.sin(radian), 2)
+    
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(calculate_angle(270))
+try:
+    print(calculate_angle(270))
+except ValueError as e:
+    print(f'ERROR {e}')
