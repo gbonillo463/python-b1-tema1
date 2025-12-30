@@ -29,20 +29,12 @@ import matplotlib.pyplot as plt
 # Esta función deberá configurar la gráfica en la variable plt
 # Aquesta funció haurà de configurar la gràfica en la variable plt
 def line_graph(x, y):
-<<<<<<< HEAD
     
-=======
-      
->>>>>>> 356139654d63b7b8f0326319551d83a7ce65be75
     plt.title('Graph')
     plt.xlabel('Axis X')
     plt.ylabel('Axis Y')
     plt.plot(x, y)
     plt.grid(True)
-<<<<<<< HEAD
-=======
-
->>>>>>> 356139654d63b7b8f0326319551d83a7ce65be75
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
