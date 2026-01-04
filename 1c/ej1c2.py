@@ -18,10 +18,10 @@ Ejemplo
 """
 
 def invert_list(lst):
-    if not lst:
-        return []
+    if len(lst) <= 1:
+        return lst
 
-    return [lst.pop()] + invert_list(lst)
+    return [lst[-1]] + invert_list(lst[:-1])
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
