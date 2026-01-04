@@ -18,7 +18,6 @@ Ejemplo:
 
 """
 
-
 def find_max(lst):
 
     if len(lst) <= 1:
@@ -26,7 +25,6 @@ def find_max(lst):
 
     return find_max(lst[:-1]) if lst[-1] < lst[0] else find_max(lst[1:])
     
-
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
